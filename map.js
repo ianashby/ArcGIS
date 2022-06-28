@@ -6,7 +6,7 @@ require([
 ], function (esriConfig, Map, MapView, FeatureLayer) {
 
    // This API Key should be kept private. Please Insert your own API Key here.
-   esriConfig.apiKey = API_KEY;
+   esriConfig.apiKey = "AAPKf250a14308274e28a7e1fe2f8385106dSMRJ02w3oLidoyW1UMRrNAP-vA5EBsxB2P6nLjbQWkkGkncF1tTn5G7LbcL0nmPI";
 
    // Create a new map using the Newspaper template/theme.
    const map = new Map({
@@ -72,7 +72,7 @@ require([
    toggleNeighborhoods.onclick = () => {
          // Makes layer NOT visible. And vice versa.
          sanFranciscoNeighborhoods.visible = !sanFranciscoNeighborhoods.visible;
-      }
+      };
 
    // Add the button to the page.
    document.body.appendChild(toggleNeighborhoods);
@@ -84,7 +84,7 @@ require([
    toggleSchools.onclick = () => {
          // Makes layer NOT visible. And vice versa.
          sanFranciscoSchools.visible = !sanFranciscoSchools.visible;
-      }
+      };
 
    // Add button to the page.
    document.body.appendChild(toggleSchools);

@@ -4,3 +4,26 @@ html, body, #viewDiv {
     height: 100%;
     width: 100%;
 }
+
+button {
+    z-index: 999;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background-color: red;
+    color: black;
+}
+
+button:nth-of-type(2) {
+    top: 20px;
+    right: 140px;
+}

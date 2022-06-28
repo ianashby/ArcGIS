@@ -30,7 +30,10 @@ require([
    // This is a the template layer that will be used to display the schools and their info.
    const schoolsTemplate = {
        title: "{Campus_Name}",
-       content: "<b>Campus Name:</b>{Campus_Name} <br/> <b>Grade Range:</b> {Grade_range} <br/> <b>Category:</b> {Category} <br/> <b>Police Districts:</b> {Police_Districts}</b>",
+       content: "<b>Campus Name:</b>{Campus_Name} <br/> \
+               <b>Grade Range:</b> {Grade_range} <br/> \
+               <b>Category:</b> {Category} <br/> \
+               <b>Police Districts:</b> {Police_Districts}</b>",
    };
 
    // This is the layer that will be used to display the schools.
@@ -47,7 +50,8 @@ require([
    // This is the template layer that will be used to display the SF Neighborhoods and their info.
    const popupTemplate = {
        title: "Neighborhood",
-       content: "<b>Neighborhood:</b> {nbrhood}<br><b>Total Population:</b> {TOTPOP_CY}",
+       content: "<b>Neighborhood:</b> {nbrhood}<br> \
+               <b>Total Population:</b> {TOTPOP_CY}",
    };
 
    // This is the layer that will be used to display the SF Neighborhoods.
@@ -60,5 +64,22 @@ require([
 
    // Add the layer to the map.
    map.add(sanFranciscoNeighborhoods, 0);
+
+   // Button to toggle the layer visibility.
+   const toggleNeighborhoods = document.createElement("button");
+   toggleNeighborhoods.innerHTML = "Toggle Neighborhood Layer";
+   toggleNeighborhoods.onclick = function () {
+         sanFranciscoNeighborhoods.visible = !sanFranciscoNeighborhoods.visible;
+      }
+   document.body.appendChild(toggleNeighborhoods);
+
+   // Button to toggle schools visibility.
+   const toggleSchools = document.createElement("button");
+   toggleSchools.innerHTML = "Toggle Schools Layer";
+   toggleSchools.onclick = function () {
+         sanFranciscoSchools.visible = !sanFranciscoSchools.visible;
+      }
+   document.body.appendChild(toggleSchools);
+
 
 });

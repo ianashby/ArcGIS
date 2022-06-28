@@ -14,7 +14,7 @@ require([
     });
 
     // Create a new MapView that will automatically display the map created above
-    // at the coordinates provided.
+    // at the coordinates provided. Coordinates were included with the map URL.
     const view = new MapView({
         container: "viewDiv",
         map: map,

@@ -68,18 +68,24 @@ require([
    // Button to toggle the layer visibility.
    const toggleNeighborhoods = document.createElement("button");
    toggleNeighborhoods.innerHTML = "Toggle Neighborhood Layer";
-   toggleNeighborhoods.onclick = function () {
+
+   toggleNeighborhoods.onclick = () => {
+         // Makes layer NOT visible. And vice versa.
          sanFranciscoNeighborhoods.visible = !sanFranciscoNeighborhoods.visible;
       }
+
+   // Add the button to the page.
    document.body.appendChild(toggleNeighborhoods);
 
    // Button to toggle schools visibility.
    const toggleSchools = document.createElement("button");
    toggleSchools.innerHTML = "Toggle Schools Layer";
-   toggleSchools.onclick = function () {
+
+   toggleSchools.onclick = () => {
+         // Makes layer NOT visible. And vice versa.
          sanFranciscoSchools.visible = !sanFranciscoSchools.visible;
       }
+
+   // Add button to the page.
    document.body.appendChild(toggleSchools);
-
-
 });
